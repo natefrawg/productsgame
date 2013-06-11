@@ -1,0 +1,63 @@
+<head>
+  <title>productsgame</title>
+</head>
+
+<body>
+  <!-- {{loginButtons}} <!-- -->
+  <h1>Welcome to Last Card</h1>
+  <div class="Rules">
+    <br/>
+    <p>Two players take turns removing between 1-7 cards per turn.</p>
+    <p>All cards must be removed from the same row during a turn.</p>
+    <p>Whoever gets stuck with the last card loses.</p>
+  </div>
+  <div id = "top">
+    {{> Startgametemplate}}
+    <h3> {{> Gametemplate}}</h3>
+  </div>
+  <div id="bottom">
+    {{> Productstemplate}}
+    {{> Endgametemplate}}
+    <!--
+    <audio autoplay>
+      <source src="assets/coin_deposit.wav">
+    </audio> -->
+    <div id="sound"></div>
+  </div>
+  
+</body>
+
+<template name="Gametemplate">
+  <div>
+    <h3>{{ GetTurn}}
+  </div>
+</template>
+
+<template name="Startgametemplate">
+	<div>
+		{{#if userId}}
+      <h3>Start a new game <input type="button" class="createrowsbutton" value="Start Game" /></h3>
+	  {{/if}}
+  </div>
+</template>
+
+<template name="Productstemplate">
+   {{#each ProductArr}}
+      <div class="Product">
+        <div class = "ProductDiv">
+          <p>{{Name}}</p>
+          <h1>{{Inventory}} cards</h1>
+        </div>
+        <div class = "ProductRight">	
+        	<p>Remove: {{QuantityRemove}}  <input type="button" class="plus" value="+" /><input type="button" class="minus" value="-" /><input type="button" class="submit" value="Submit" /></p>
+      	</div>
+      </div>
+   {{/each}}
+</template>
+
+<template name="Endgametemplate">
+  <div class="Endgame">
+    <h1>{{GameOver}}</h1>
+  </div>
+</template>
+

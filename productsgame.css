@@ -1,0 +1,61 @@
+/* CSS declarations go here */
+
+.Product {
+	background-color: gray;
+	height: 100px;
+	width: 330px;
+	margin-top: 5px;
+	padding: 3px;
+}
+
+.ProductDiv {
+	background-color: white;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.ProductRight {
+	line-height: 90%;
+	float: right;
+	color: white;
+}
+
+#Cart {
+	border: 2px dashed black;
+	margin: 20px;
+	clear: left;
+}
+
+.Endgame {
+	color: red;
+}
+
+#lobby {
+    margin: 100px auto;
+    text-align: center;
+}
+
+
+
+#login {
+    margin: 100px auto;
+    text-align: center;
+}
+
+#login .error {
+    color: red;
+}
+
+p {
+	margin-top: -5px;
+	margin-bottom: 0px;
+	line-height: 120%;
+}
+
+h1 {
+	margin: 0px;
+}
+
+input {
+	
+}
